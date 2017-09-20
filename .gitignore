@@ -1,0 +1,11 @@
+.*.swp
+*.egg-info
+*.eggs
+*.log
+*.egg
+*.pyc
+dist
+build
+.ropeproject
+tobeignored
+node_modules

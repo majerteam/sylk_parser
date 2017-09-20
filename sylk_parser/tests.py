@@ -1,4 +1,4 @@
-from io import StringIO
+from cStringIO import StringIO
 from sylk_parser import SylkParser
 
 
@@ -17,3 +17,4 @@ def test_one(test_filename, expected_results_filename, headers=None):
 test_one("tests/wikipedia.slk", "tests/wikipedia.csv")
 headers = ["Utilisateur", "MotDePasse"]
 test_one("tests/libreoffice.slk", "tests/libreoffice.csv", headers=headers)
+test_one("tests/balance_analytique.slk", "tests/balance_analytique.csv")
