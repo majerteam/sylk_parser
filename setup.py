@@ -8,7 +8,7 @@ with open(os.path.join(here, 'README.txt')) as f:
 
 setup(
     name='sylk_parser',
-    version='0.2a1',
+    version='0.2',
     description='Basic SLK (sylk) to CSV parser',
     long_description=README,
     license='GPLv3',
