@@ -8,12 +8,19 @@ SYLK_CHARSET = "cp1252"
 
 class SylkParser:
 
-    def __init__(self, filename, headers=None, encoding=SYLK_CHARSET):
+    def __init__(
+        self,
+        filename,
+        headers=None,
+        encoding=SYLK_CHARSET,
+        use_unicode=False,
+    ):
         if headers is None:
             headers = []
 
         self.headers = headers
         self.sylk_handler = SYLK()
+        self.use_unicode = use_unicode
         with io.open(filename, encoding=encoding) as handle:
             self.sylk_handler.parse(handle)
 
@@ -42,6 +49,9 @@ class SylkParser:
 
     def __iter__(self):
         for line in self.sylk_handler.stream_rows():
+            if self.use_unicode:
+                line = [a.decode('utf-8') for a in line]
+
             if self.headers:
                 yield dict(zip(self.headers, line))
             else:

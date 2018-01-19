@@ -1,6 +1,6 @@
 "0USER","USER1","218200","Transport","5100"," ","5100"
 "0USER","USER1","275000","Caution","1600"," ","1600"
-"0USER","USER1","281820","Amort Materiel","1700","3914.72","-2214.72"
+"0USER","USER1","281820","Amort Matériel","1700","3914.72","-2214.72"
 "0USER","USER1","401100","Fournisseurs ","2609.4","1759.01","850.39"
 "0USER","USER1","401200","Fournisseurs ","19204.67","26263.01","-7058.34"
 "0USER","USER1","411200","Client","87638.02","68096.52","19541.5"
@@ -8,8 +8,8 @@
 "0USER","USER1","411700","client- Retenue de garantie 5 %","18164.9","1586.48","16578.42"
 "0USER","USER1","416000","Clients douteux ou litigieux ","2402.82"," ","2402.82"
 "0USER","USER1","419100","Clients - avances et acomptes ","4983.57","4983.57","0"
-"0USER","USER1","421200","Personnel â€“ remu","8888.55","8888.55","0"
-"0USER","USER1","425200","Frais â€“ Personnel","27651.5","22729.69","4921.81"
+"0USER","USER1","421200","Personnel – remu","8888.55","8888.55","0"
+"0USER","USER1","425200","Frais – Personnel","27651.5","22729.69","4921.81"
 "0USER","USER1","428610","Autres Charges intNBeressement"," ","2428.58","-2428.58"
 "0USER","USER1","431000","URSSAF SNBecuritNBe sociale","3171.13","2744.01","427.12"
 "0USER","USER1","436000","Caisse des CongNBes PayNBes","3355.73","3355.73","0"
@@ -71,5 +71,3 @@
 "0USER","USER1","706010","Presta interne"," ","110","-110"
 "0USER","USER1","706012","Prestations de services 20 %"," ","9801.2","-9801.2"
 "0USER","USER1","771800","Produits excep. / PP","3088.45"," ","3088.45"
-
-
