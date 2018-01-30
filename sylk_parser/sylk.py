@@ -114,6 +114,8 @@ class SYLK:
         'd, mmmm yyyy': 'date',
     }
 
+    date_output = "%d/%m/%Y"
+
     def __init__(self):
         self.datebase = self.unixepoch
         self.printformats = []
@@ -163,6 +165,8 @@ class SYLK:
     def _id_field(self, fields):
         if fields[1][:6] in ("PClari", "PApple"):
             self.datebase = self.macepoch
+        elif fields[1][:6] in ('P Sage',):
+            self.datebase = self.pcepoch
 
     def _f_field(self, fields):
         for f in fields[1:]:
@@ -185,8 +189,10 @@ class SYLK:
             val = f[1:]
             if ftd == "X":
                 self.curx = int(val)
+
             elif ftd == "Y":
                 self.cury = int(val)
+
             elif ftd == "K":
                 val = eval(self.escape(val))
                 if type(val) == int:
@@ -194,9 +200,13 @@ class SYLK:
                         # value is offset in days from datebase
                         date = time.localtime(
                             time.mktime(self.datebase) +
-                            float(val)*24*60*60)
-                        val = time.strftime("%m/%d/%y", date)
+                            float(val) * 24 * 60 * 60
+                        )
+
+                        val = time.strftime(self.date_output, date)
+
                 self.data[(self.curx, self.cury)] = "%s" % val
+
             else:
                 self.addunknown("C", ftd)
 

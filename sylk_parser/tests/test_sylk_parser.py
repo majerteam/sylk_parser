@@ -1,5 +1,6 @@
 from cStringIO import StringIO
 from sylk_parser import SylkParser
+from sylk_parser.sylk import SYLK
 
 
 def _test_one(test_filename, expected_results_filename, headers=None,
@@ -50,3 +51,10 @@ def test_stream_unicode():
     for line in parser:
         for i in line:
             assert isinstance(i, str)
+
+
+def test_detect_datebase():
+    handler = SYLK()
+    assert handler.datebase == handler.unixepoch
+    handler.parseline("ID;P Sage")
+    assert handler.datebase == handler.pcepoch
