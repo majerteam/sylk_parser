@@ -1,6 +1,11 @@
 sylk parser
 ==============
 
+.. image::
+    https://secure.travis-ci.org/majerteam/sylk_parser.png?branch=master
+   :target: http://travis-ci.org/majerteam/sylk_parser
+   :alt: Travis-ci: continuous integration status.
+
 A .slk files parser
 
 SLK format : https://en.wikipedia.org/wiki/SYmbolic_LinK_(SYLK)
