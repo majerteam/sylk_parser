@@ -1,0 +1,21 @@
+language: python
+python:
+- 2.7
+install:
+- pip install .
+script: py.test
+notifications:
+  irc:
+    channels:
+    - irc.freenode.org#majerteam-travis
+    on_success: change
+
+deploy:
+  provider: pypi
+  user: tonthon21
+  password:
+    secure: f8v5DrLDBguTGfG6UN+Kcqk6Y6xUv0NmJ3Qm7vwhJZs8KfQkz1D0zX/u/tjVIE7UaexeJdp/AR3AsTOLNqCRT3IiU8+nWKAMioF+EYRymQ064pCJX73MIwAe0hll6GcTW9IJLHVhM8uBkzkS84xpr7hTwOqmN15OyLo8xExyDKM0wfC9kLkdagydGymRvIMFP0c4ZGsFqXS72zbpU/n55jUvilmpg/PMlAOAzNMe1VYfO98wmFS/4Bi2YLIxGxxU9Exuqzs3mtOLLuXZGDi0c5LiDMfJGuTdGBGcgxP8ttdF53FJldNYYN1rmAdDcIP/kUX4lIobfj3cgKq/tRpTgV4DGh0nRfFKb9MZXuT4XTC4XCKgDeDeqT+Rm4mlxb8ClzTE2HvTNCHJqfRE0h8dFHILapcucWOruuaH8mK3ytzdg8yymMIT4uMM3fvFPaE8Q9KqzlCYdyxIdKUOY+7zqTl7RB95+A7LSuOIcp+DGcGYxZL1phay37qoAORsbh7O3kVVqKVCEi30E42DWS8zW5oSifEHWN2j10Z/T3kjizNhRHamYBrlwHkrTD3Xztr/9FjuHzfzVr/FMllfnhnlya48Bjr17fqhyZiE91dy3DCCJxlKO4FKmBK8m7J8nyX0wYNsJSFgL/XcdyR6saz/o934Rr8V80S1dXktAuU3NbY=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: CroissanceCommune/autonomie_base
