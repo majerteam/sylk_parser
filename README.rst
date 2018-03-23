@@ -23,12 +23,18 @@ Installation
 Usage
 ------
 
-From python code
+From Python code
 
 .. code-block:: python
 
+    from cStringIO import StringIO
     from sylk_parser import SylkParser
 
-    parser = SylkParser(filepath)
-    with open("/tmp/result.csv", "wb") as fbuf:
-        parser.to_csv(fbuf)
+    parser = SylkParser("somefile.slk")
+
+    fbuf = StringIO()
+    parser.to_csv(fbuf)
+
+    test_results = fbuf.getvalue()
+    print test_results
+
