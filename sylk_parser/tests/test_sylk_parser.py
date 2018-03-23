@@ -68,4 +68,4 @@ def test_detect_datebase():
     handler = SYLK()
     assert handler.datebase == handler.unixepoch
     handler.parseline("ID;P Sage")
-    assert handler.datebase == handler.pcepoch
+    assert handler.datebase == handler.macepoch

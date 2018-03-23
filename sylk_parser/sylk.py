@@ -163,10 +163,8 @@ class SYLK:
         stream.flush()
 
     def _id_field(self, fields):
-        if fields[1][:6] in ("PClari", "PApple"):
+        if fields[1][:6] in ("PClari", "PApple", "P Sage"):
             self.datebase = self.macepoch
-        elif fields[1][:6] in ('P Sage',):
-            self.datebase = self.pcepoch
 
     def _f_field(self, fields):
         for f in fields[1:]:
@@ -200,7 +198,7 @@ class SYLK:
                         # value is offset in days from datebase
                         date = time.localtime(
                             time.mktime(self.datebase) +
-                            float(val) * 24 * 60 * 60
+                            (float(val) - 1) * 24 * 60 * 60
                         )
 
                         val = time.strftime(self.date_output, date)
