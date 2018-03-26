@@ -198,7 +198,7 @@ class SYLK:
                         # value is offset in days from datebase
                         date = time.localtime(
                             time.mktime(self.datebase) +
-                            (float(val) - 1) * 24 * 60 * 60
+                            float(val) * 24 * 60 * 60
                         )
 
                         val = time.strftime(self.date_output, date)
