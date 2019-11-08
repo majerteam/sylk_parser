@@ -1,7 +1,6 @@
 # -*- coding:utf-8 -*-
 import csv
 from sylk_parser.sylk import SYLK
-import io
 
 SYLK_CHARSET = "cp1252"
 
@@ -19,7 +18,7 @@ class SylkParser:
 
         self.headers = headers
         self.sylk_handler = SYLK()
-        with io.open(filename, encoding=encoding) as handle:
+        with open(filename, encoding=encoding) as handle:
             self.sylk_handler.parse(handle)
 
     def to_csv(self, fbuf, quotechar='"', delimiter=','):
