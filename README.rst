@@ -27,7 +27,7 @@ From Python code
 
 .. code-block:: python
 
-    from cStringIO import StringIO
+    from io import StringIO
     from sylk_parser import SylkParser
 
     parser = SylkParser("somefile.slk")
