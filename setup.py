@@ -15,7 +15,8 @@ setup(
     license='GPLv3',
     classifiers=[
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-        "Programming Language :: Python3",
+        "Programming Language :: Python",
+        'Programming Language :: Python :: 3',
         'Topic :: Software Development :: Libraries',
         'Intended Audience :: Developers',
     ],
