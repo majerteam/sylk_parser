@@ -11,6 +11,7 @@ setup(
     version='0.5',
     description='Basic SLK (sylk) to CSV parser',
     long_description=README,
+    long_description_content_type='text/rst',
     license='GPLv3',
     classifiers=[
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
