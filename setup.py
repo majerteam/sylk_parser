@@ -8,16 +8,15 @@ with open(os.path.join(here, 'README.rst')) as f:
 
 setup(
     name='sylk_parser',
-    version='0.4',
+    version='0.5',
     description='Basic SLK (sylk) to CSV parser',
     long_description=README,
     license='GPLv3',
     classifiers=[
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-        "Programming Language :: Python",
-        "Framework :: Pyramid",
-        "Topic :: Internet :: WWW/HTTP",
-        "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+        "Programming Language :: Python3",
+        'Topic :: Software Development :: Libraries',
+        'Intended Audience :: Developers',
     ],
     author='Majerti',
     author_email='equipe@majerti.fr',
