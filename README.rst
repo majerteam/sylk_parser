@@ -45,4 +45,4 @@ Note on dates
 Dates in Sylk files are non standard offsets.
 We try to find the good offset regarding the "ID" field.
 
-See :py:method:`sylk_parser.sylk.SYLK._id_field`
+See :sylk_parser.sylk.SYLK._id_field method
