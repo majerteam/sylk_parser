@@ -1,6 +1,6 @@
 language: python
 python:
-- 2.7
+- 3.7
 install:
 - pip install .
 script: py.test
@@ -9,12 +9,3 @@ notifications:
     channels:
     - irc.freenode.org#majerteam-travis
     on_success: change
-deploy:
-  provider: pypi
-  user: tonthon21
-  password:
-    secure: aG6AQo7N0c5e/bgbN2fSBHLBDhoFuTreMmYXlAQTP6tXgPzgXEM69U2lLBeyLcLneRXwCEW0k7HbL9GkALGB7zxX429/8nQCcW86NIY5qJ0er6YKeUxzlHonS0pyP/dUPYO5Xkxch/+AIg4J1yjljNY8M1EvBxLeAxsWVPZF0USTKf4QKBXEcaQ+oxvYU8jia+UU3yzQKkLaLlXDIc9GYFXcvpW8QfD8LbLb9/GBiF/fixrMI3simZcIHmAvfc98dV6r80nosGmJP1aNr4xCw7X93JSIkpTv83HUeAcQp/SifXR8k/9WpN07lpO8IJTIkqGAAQwrKPLwyhusIzycrhG7bmejn9mYiHc3QeOBeUWp9maxbni8q82cyTewtNj8GTt31Oy6CeH5oUv8FSC2h1mu5Xzd7yFONNrQEMD7e571i/SP5l5JcqcVLJuI3QAZUPvd2CXxxkweZtwO8BIsFxh8xrsuuE2A5Vyj5/2re7FRA47MV4hPmFTtjemRizTLgXkDsxrMyVKVG4ItDfG3jz/q7xzZdl4nEGTKRq55KIZJGgRhMBNUW/7gbdO9a1pAkrY0cqLyqLUmY0Henw8eU/EC2EvmySNynUNIfSpmEmWuYdiTL5gvcdD1ZJ0ElVNqsbdJbXpWGMpER1v1CkFErqC9HAihpxrmS13orNIhwys=
-  on:
-    tags: true
-    distributions: sdist bdist_wheel
-    repo: majerteam/sylk_parser
